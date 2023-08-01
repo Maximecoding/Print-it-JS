@@ -22,3 +22,6 @@ const right = document.querySelector (".arrow_right");
 const img = document.querySelector ("#banner-img");
 const nom = document.querySelector ("#tagLine");
 const dots = document.querySelector (".dot");
+
+left.addEventListener("click", moveLeft)
+right.addEventListener("click", moveRight)
