@@ -25,3 +25,23 @@ const dots = document.querySelector (".dot");
 
 left.addEventListener("click", moveLeft)
 right.addEventListener("click", moveRight)
+
+
+function moveLeft() {
+	if (count == 0 ) {
+		count = slides.length - 1;
+	} else {
+		count = count - 1
+	}
+	displayImage()
+}
+
+function moveRight() {
+	if (count == slides.length - 1) {
+		count = 0;
+	} else {
+		count = count + 1
+	}
+	displayImage()
+	
+}
