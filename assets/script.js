@@ -26,6 +26,14 @@ const dots = document.querySelector (".dot");
 left.addEventListener("click", moveLeft)
 right.addEventListener("click", moveRight)
 
+let count= 0;
+ 
+function displayImage() {
+	const currentSlide = slides[count];
+    img.src = `./assets/images/slideshow/${currentSlide.image}`;
+	img.alt = currentSlide.tagLine;
+    nom.innerHTML = currentSlide.tagLine;
+}
 
 function moveLeft() {
 	if (count == 0 ) {
