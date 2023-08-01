@@ -21,7 +21,8 @@ const left = document.querySelector (".arrow_left");
 const right = document.querySelector (".arrow_right");
 const img = document.querySelector ("#banner-img");
 const nom = document.querySelector ("#tagLine");
-const dots = document.querySelector (".dot");
+const dots = document.querySelector (".dots");
+createDots()
 
 left.addEventListener("click", moveLeft)
 right.addEventListener("click", moveRight)
@@ -52,4 +53,17 @@ function moveRight() {
 	}
 	displayImage()
 	
+}
+
+function createDots() {
+	for (let i = 0; i < slides.length; i++) {
+		const div = document.createElement('div')
+		div.classList.add('dot')
+		dots.appendChild(div)
+		div.addEventListener('click',() => {
+			count = i
+			displayImage()
+			
+		} )
+	}
 }
